@@ -1,0 +1,18 @@
+<div class="card" >
+
+    <div>
+      Nume:{{persoana.nume}}
+    </div>
+  
+    <div>
+      Varsta:{{persoana.varsta}}
+    </div>
+  
+    <div *ngIf="persoana.inaltime>160">
+      Inaltime:{{persoana.inaltime}}
+    </div>
+  
+    <button (click)="delete()">Delete</button>
+
+
+  </div>

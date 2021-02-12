@@ -1,0 +1,30 @@
+<h1>My first angular application</h1>
+
+
+<div class="card">
+
+  <div>
+    Nume:{{persoana.nume}}
+  </div>
+
+  <div>
+    Varsta:{{persoana.varsta}}
+  </div>
+
+  <div *ngIf="persoana.inaltime>160">
+    Inaltime:{{persoana.inaltime}}
+  </div>
+
+  <button (click)="delete()">Delete</button>
+
+
+</div>
+
+<div class="card-container">
+
+  <app-card *ngFor="let persoana of persoane;let i=index" [persoana]="persoana" (deleteEvent)="deleteCard(i)">
+
+  </app-card>
+
+
+</div>
